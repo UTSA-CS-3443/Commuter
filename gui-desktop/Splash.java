@@ -33,6 +33,7 @@ public class Splash extends Application{
         this.stage.initStyle(StageStyle.TRANSPARENT);
         this.stage.setScene(scene);
         this.stage.show();
+       // this.stage.setAlwaysOnTop(false);
         MainMenu menu = new MainMenu();
         this.stage2 = menu.getStage();
         this.stage.close();

@@ -1,3 +1,4 @@
+import javafx.beans.property.DoubleProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -16,6 +17,7 @@ public class MainMenu{
 
     @FXML
     public ImageView image;
+    @FXML
     public Pane pane;
 
     public MainMenu() throws IOException, InterruptedException {
@@ -26,13 +28,13 @@ public class MainMenu{
     public Stage getStage(){
         return this.stage;
     }
+
     public void setStage(Stage stage) throws InterruptedException, IOException {
-        Thread.sleep(5000);
         this.stage = stage;
         Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
         this.scene = new Scene(root);
-        this.stage.setFullScreen(true);
         this.stage.setScene(this.scene);
+        this.stage.setFullScreen(true);
         this.stage.setAlwaysOnTop(true);
     }
 }
