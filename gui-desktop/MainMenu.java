@@ -1,5 +1,3 @@
-package fxjava;
-
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -11,7 +9,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 
-public class Menu{
+public class MainMenu{
 
     private Stage stage;
     private Scene scene;
@@ -20,13 +18,13 @@ public class Menu{
     public ImageView image;
     public Pane pane;
 
-    public Menu() throws IOException, InterruptedException {
+    public MainMenu() throws IOException, InterruptedException {
         this.stage = new Stage();
         setStage(stage);
     }
 
     public Stage getStage(){
-     return this.stage;
+        return this.stage;
     }
     public void setStage(Stage stage) throws InterruptedException, IOException {
         Thread.sleep(5000);

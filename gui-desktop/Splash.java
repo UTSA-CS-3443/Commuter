@@ -1,5 +1,3 @@
-package fxjava;
-
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
@@ -35,7 +33,7 @@ public class Splash extends Application{
         this.stage.initStyle(StageStyle.TRANSPARENT);
         this.stage.setScene(scene);
         this.stage.show();
-        Menu menu = new Menu();
+        MainMenu menu = new MainMenu();
         this.stage2 = menu.getStage();
         this.stage.close();
         this.stage2.show();
