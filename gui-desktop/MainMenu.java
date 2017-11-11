@@ -3,6 +3,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.PasswordField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -16,13 +17,15 @@ public class MainMenu{
     private Scene scene;
 
     @FXML
-    public ImageView image;
+    private ImageView image;
     @FXML
-    public Pane pane;
+    private Pane pane;
+    @FXML
+    private PasswordField bannerID;
 
     public MainMenu() throws IOException, InterruptedException {
         this.stage = new Stage();
-        setStage(stage);
+        setStage(this.stage);
     }
 
     public Stage getStage(){
@@ -35,6 +38,10 @@ public class MainMenu{
         this.scene = new Scene(root);
         this.stage.setScene(this.scene);
         this.stage.setFullScreen(true);
+        //double bannerIDHeight = this.bannerID.getHeight();
+       // double bannerIDWidth = this.bannerID.getWidth();
+        //this.bannerID.setPrefWidth((this.stage.getWidth()/2) - bannerIDWidth);
+        //this.bannerID.setPrefHeight((this.stage.getHeight()/2) - bannerIDHeight);
         this.stage.setAlwaysOnTop(true);
     }
 }
