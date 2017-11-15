@@ -1,35 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.TextFlow?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fitHeight="400.0" fitWidth="608.0" layoutX="-3.0">
-         <image>
-            <Image url="@userinterface.png" />
-         </image>
-      </ImageView>
-      <PasswordField id="bannerID" fx:id="bannerID" alignment="CENTER" layoutX="151.0" layoutY="175.0" prefHeight="22.0" prefWidth="146.0" promptText="Banner ID">
-         <font>
-            <Font name="Consolas" size="12.0" />
-         </font>
-      </PasswordField>
-      <TextFlow id="login" fx:id="login" layoutX="151.0" layoutY="147.0" prefHeight="22.0" prefWidth="146.0" />
-      <Pane layoutX="306.0" layoutY="149.0" prefHeight="53.0" prefWidth="53.0">
+      <Pane prefHeight="414.0" prefWidth="608.0" maxHeight="-Infinity" maxWidth="-Infinity">
          <children>
-            <ImageView fitHeight="61.0" fitWidth="64.0" layoutX="-5.0" layoutY="-4.0">
+            <ImageView AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@userinterface.png" />
+               </image>
+            </ImageView>
+            <PasswordField id="bannerID" fx:id="bannerID" alignment="CENTER" layoutX="804" layoutY="480" prefHeight="22.0" prefWidth="246.0" maxWidth="-Infinity" maxHeight="-Infinity" promptText="Banner ID">
+               <font>
+                  <Font name="Consolas" size="12.0" />
+               </font>
+            </PasswordField>
+            <TextFlow id="login" fx:id="login" layoutX="804" layoutY="440" prefHeight="22.0" prefWidth="246.0" />
+            <Pane layoutX="394.0" layoutY="25.0" prefHeight="364.0" prefWidth="200.0">
+               <children>
+                  <Pane layoutX="-10.0" layoutY="135.0" prefHeight="53.0" prefWidth="53.0" />
+               </children>
+            </Pane>
+            <ImageView fitHeight="61.0" fitWidth="64.0" layoutX="1064" layoutY="440">
                <image>
                   <Image url="@175x175bb.png" />
                </image>
             </ImageView>
          </children>
       </Pane>
-      <Pane fx:id="twitter" layoutX="386.0" layoutY="18.0" prefHeight="364.0" prefWidth="200.0" />
    </children>
 </AnchorPane>
