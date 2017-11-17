@@ -12,7 +12,7 @@
       <Pane prefHeight="342.0" prefWidth="608.0">
          <children>
              <ImageView fitHeight="342.0" fitWidth="608.0" preserveRatio="true">
-                 <Image url="@userinterface.png">
+                 <Image url="@userinterface-2.png">
 
            </Image>
              </ImageView>
