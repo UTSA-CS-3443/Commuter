@@ -8,5 +8,6 @@ public class Launcher extends Application{
     }
     public void start(Stage primaryStage) throws Exception {
         Splash splash = new Splash(primaryStage);
+        MainMenu menu = new MainMenu(primaryStage);
     }
 }

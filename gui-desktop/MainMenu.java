@@ -23,7 +23,7 @@ public class MainMenu{
     @FXML
     private PasswordField bannerID;
 
-    public MainMenu() throws IOException, InterruptedException {
+    public MainMenu(Stage stage) throws IOException, InterruptedException {
         this.stage = new Stage();
         setStage(this.stage);
     }
