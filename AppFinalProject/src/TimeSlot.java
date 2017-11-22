@@ -1,16 +1,20 @@
+import java.util.ArrayList;
 
-public class TimeSlot 
+public class TimeSlot
 {
 	private int hour;
 	private int minute;
 	private String stop;
 	private int offset;
-	
+	private ArrayList<Student> students;
+	private int studentLimit = 70;
+
 	public TimeSlot(int iHour, int iMinute, String stop)
 	{
 		this.setHour(iHour);
 		this.setMinute(iMinute);
 		this.setStop(stop);
+		this.students = new ArrayList<Student>();
 	}
 	
 	public String toString()
@@ -21,6 +25,9 @@ public class TimeSlot
 			return this.getHour() + ":" + this.getMinute();
 			
 	}
+
+
+
 
 	public int getHour() {
 		return hour;
@@ -43,8 +50,14 @@ public class TimeSlot
 		return stop;
 	}
 
-	public void setStop(String stop) {
+	public void setStop(String stop)
+	{
 		this.stop = stop;
+	}
+
+	public ArrayList<Student> getStudents()
+	{
+		return students;
 	}
 
 }

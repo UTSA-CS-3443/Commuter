@@ -4,19 +4,20 @@ public class Route
 {
 	private ArrayList<TimeSlot> timeSlots;
 	private ArrayList<BusStop> busStops;
-	private ArrayList<Student> students;
 	private String name;
 	private TimeSlot start;
 	private TimeSlot end;
-	
+	private int studentLimit;
+
 	public Route(String szName, TimeSlot start, TimeSlot end)
 	{
-		this.setTimeSlots(new ArrayList<TimeSlot>());
-		this.setBusStops( new ArrayList<BusStop>());
-		this.setStudents( new ArrayList<Student>());
+		this.setTimeSlots(new ArrayList<>());
+		this.setBusStops( new ArrayList<>());
+		//this.setStudents( new ArrayList<>());
 		this.setName(szName);
 		this.setStart(start);
 		this.setEnd(end);
+		this.studentLimit = 70;
 	}
 	
 
@@ -25,6 +26,17 @@ public class Route
 		BusStop stop = new BusStop(name, offset);
 		this.getBusStops().add(stop);
 	}
+
+
+	public Boolean hasSeats(int iTime)
+	{
+		if (this.getTimeSlots().get(iTime).getStudents().size() < this.studentLimit)
+			return true;
+		else
+			return false;
+
+	}
+
 
 	public void fillTimeSlots()
 	{
@@ -76,9 +88,13 @@ public class Route
 	
 
 	
-	
+
+
+
+
 	public void printTimes()
 	{
+		System.out.println("\n");
 		for (int i = 0; i < this.getBusStops().size(); i++)
 		{
 			System.out.printf("%24s", this.getBusStops().get(i).getName());
@@ -88,7 +104,7 @@ public class Route
 		for (int j = 0; j < this.getTimeSlots().size(); j++)
 		{
 			if (!this.getTimeSlots().get(j).getStop().equals("NULL")) {
-				System.out.printf("%24s", this.getTimeSlots().get(j).toString());
+				System.out.printf("%20s %d", this.getTimeSlots().get(j).toString(), 70 - this.getTimeSlots().get(j).getStudents().size());
 				stopCount++;
 				if (stopCount >= this.getBusStops().size())
 				{
@@ -141,11 +157,5 @@ public class Route
 		this.busStops = busStops;
 	}
 
-	public ArrayList<Student> getStudents() {
-		return students;
-	}
 
-	public void setStudents(ArrayList<Student> students) {
-		this.students = students;
-	}
 }
