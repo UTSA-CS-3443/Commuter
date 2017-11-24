@@ -7,24 +7,23 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane prefHeight="342.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="commuterRoutes.Route43">
-<children>
-   <Pane prefHeight="342.0" prefWidth="608.0">
-      <children>
-         <ImageView fitHeight="342.0" fitWidth="608.0" preserveRatio="true">
-            <Image url="@userinterface-2.png">
-
-            </Image>
-         </ImageView>
-         <ImageView fitHeight="137.0" fitWidth="365.0" layoutX="122.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@Route22.png" />
-            </image>
-         </ImageView>
-         <TextField alignment="CENTER" layoutX="221.0" layoutY="229.0" text="Pick Your Stop:" />
-         <Button fx:id="btnVilBab" layoutX="146.0" layoutY="269.0" mnemonicParsing="false" text="(1) Villas @ Babcock" />
-         <Button fx:id="btnReserve" layoutX="326.0" layoutY="269.0" mnemonicParsing="false" text="(2) The Reserve" />
-      </children>
-   </Pane>
-</children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="342.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="commuterRoutes.Route43">
+   <children>
+      <Pane prefHeight="342.0" prefWidth="608.0">
+         <children>
+            <ImageView AnchorPane.bottomAnchor="-738.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1312.0" AnchorPane.topAnchor="0.0">
+               <Image url="@userinterface-2.png">
+               </Image>
+            </ImageView>
+            <ImageView fitHeight="230.0" fitWidth="590.0" layoutX="605.0" layoutY="322.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Route22.png" />
+               </image>
+            </ImageView>
+            <TextField alignment="CENTER" layoutX="817.0" layoutY="571.0" text="Pick Your Stop:" />
+            <Button fx:id="btnVilBab" layoutX="698.0" layoutY="632.0" mnemonicParsing="false" text="(1) Villas @ Babcock" />
+            <Button fx:id="btnReserve" layoutX="938.0" layoutY="632.0" mnemonicParsing="false" text="(2) The Reserve" />
+         </children>
+      </Pane>
+   </children>
 </AnchorPane>

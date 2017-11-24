@@ -7,24 +7,24 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane prefHeight="342.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="commuterRoutes.Route43">
-<children>
-    <Pane prefHeight="342.0" prefWidth="608.0">
-        <children>
-            <ImageView fitHeight="342.0" fitWidth="608.0" preserveRatio="true">
-                <Image url="@userinterface-2.png">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="342.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="commuterRoutes.Route43">
+    <children>
+        <Pane prefHeight="342.0" prefWidth="608.0">
+            <children>
+                <ImageView AnchorPane.bottomAnchor="-738.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1312.0" AnchorPane.topAnchor="0.0">
+                    <Image url="@userinterface-2.png">
 
-                </Image>
-            </ImageView>
-            <Button fx:id="btnECampL2" layoutX="333.0" layoutY="270.0" mnemonicParsing="false" text="(2) East Campus Lot 2" />
-            <ImageView fitHeight="137.0" fitWidth="365.0" layoutX="122.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
-                <image>
-                    <Image url="@Route13.png" />
-                </image>
-            </ImageView>
-            <Button fx:id="btnECampL1" layoutX="122.0" layoutY="270.0" mnemonicParsing="false" text="(1) East Camput Lot 1" />
-            <TextField alignment="CENTER" layoutX="234.0" layoutY="236.0" prefHeight="27.0" prefWidth="141.0" text="Pick Your Stop:" />
-        </children>
-    </Pane>
-</children>
+                    </Image>
+                </ImageView>
+                <Button fx:id="btnECampL2" layoutX="995.0" layoutY="715.0" mnemonicParsing="false" text="(2) East Campus Lot 2" />
+                <ImageView fitHeight="208.0" fitWidth="573.0" layoutX="674.0" layoutY="405.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Route13.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="btnECampL1" layoutX="776.0" layoutY="715.0" mnemonicParsing="false" text="(1) East Camput Lot 1" />
+                <TextField alignment="CENTER" layoutX="890.0" layoutY="638.0" prefHeight="27.0" prefWidth="141.0" text="Pick Your Stop:" />
+            </children>
+        </Pane>
+    </children>
 </AnchorPane>
