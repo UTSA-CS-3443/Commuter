@@ -9,23 +9,39 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-
+/**
+ * This is to handle an optional splash screen add on
+ * for hnadling preprocessing data (i.e. TCP connections)
+ * implementing runnable for threading
+ *
+ * @author Perry Jonathan
+ */
 public class Splash implements Runnable{
 
     private Stage stage;
     private Scene scene;
-
-    @FXML
-    private ImageView image;
-    @FXML
-    private Pane pane;
+    @FXML private ImageView image;
+    @FXML private Pane pane;
 
 
+    /**
+     * This constructor will handle the setup for the splash screen stage
+     *
+     * @param stage to handle the current scene
+     * @throws Exception excep. for file loaders
+     */
     public Splash(Stage stage) throws Exception {
         this.stage = stage;
         splashScreen();
     }
 
+    /**
+     * splashscreen method handles the bulk of setup
+     * transparent BG's for a freefloating splash
+     * preprocessor placeholder
+     *
+     * @throws Exception excep. for file loaders
+     */
     public void splashScreen() throws Exception{
         pane = new Pane();
         Image img = new Image(getClass().getResource("splash.png").toString());
@@ -38,10 +54,11 @@ public class Splash implements Runnable{
         this.stage.setScene(this.scene);
     }
 
-    public Stage getStage() {
-        return this.stage;
-    }
-
+    /***
+     * primary use of runnable
+     *
+     * @Override used to override norm. thread methods
+     */
     @Override
     public void run() {
         this.stage.show();

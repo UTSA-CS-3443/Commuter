@@ -1,39 +1,39 @@
 package menu;
 
-import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.PasswordField;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.Pane;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
-import javafx.stage.Window;
-import javafx.stage.WindowEvent;
-
-import javax.swing.event.DocumentEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-
+/**
+ * The menu controller is tied to the menu fxml file
+ * this will handle all needed events for this stage
+ *
+ * @author Perry Jonathan
+ */
 public class MenuControls implements Initializable{
 
     @FXML private PasswordField bannerID;
     @FXML private TextFlow login;
-    @FXML private ImageView logInBtn;
-    @FXML private Pane twitter;
     @FXML private WebView webView;
     private Text wrong = new Text();
     private Text passwordPromt = new Text();
 
     private boolean bVal;
+
+    /**
+     * this method will be called by the passwordField in the fxml file
+     * it will handle checking the field at each keystroke for correctness
+     *
+     * @param event a keyboard key stroke event
+     */
     public void handleKeys(KeyEvent event){
         this.login.getChildren().remove(this.passwordPromt);
         if (getPassword().length() < 7) {
@@ -48,6 +48,14 @@ public class MenuControls implements Initializable{
         this.bVal = true;
     }
 
+    /**
+     * This is used for onMouseClick with ImageView in the fxml
+     * this method will verify correctness of ID entered and
+     * it will prompt incorrect or parse the data to mySQL
+     *
+     * @param event
+     * @throws InterruptedException
+     */
     public void handleLogIn(MouseEvent event) throws InterruptedException {
         String password = getPassword();
         this.bannerID.clear();
@@ -61,6 +69,11 @@ public class MenuControls implements Initializable{
         }
     }
 
+    /**
+     * handles populating the WebView pane with data
+     * using WebEngine and WebView to apply a simple script
+     * and HTML5 for the header
+     */
     public void tweets(){
         WebEngine webEngine = this.webView.getEngine();
         webEngine.javaScriptEnabledProperty().setValue(true);
@@ -71,11 +84,22 @@ public class MenuControls implements Initializable{
         );
     }
 
+    /**
+     * a simple getter to grab a string from text field
+     *
+     * @return String returns bannerID holding the value of passwordField
+     */
     public String getPassword() {
         String bannerID = this.bannerID.getText();
         return bannerID;
     }
 
+
+    /**
+     * this will be the preEvent handler for prior to Window.SHOWN/SHOWING
+     *
+     * @Override for a new used of Init methods for controller
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         this.passwordPromt.setText("Enter your bannerID");
