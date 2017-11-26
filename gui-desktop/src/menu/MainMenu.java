@@ -13,7 +13,7 @@ import java.io.IOException;
  *
  * @author Perry Jonathan
  */
-public class MainMenu implements Runnable{
+public class MainMenu{
 
     private Stage stage;
     private Scene scene;
@@ -27,9 +27,14 @@ public class MainMenu implements Runnable{
      * @throws IOException for the file loader
      *
      */
-    public MainMenu(Stage stage) throws IOException{
-        this.stage = stage;
+    public MainMenu(Stage stage){
+        stage.close();
+        this.stage = new Stage();
         setStage(this.stage);
+    }
+
+    public Stage getStage() {
+        return this.stage;
     }
 
     /**
@@ -40,24 +45,24 @@ public class MainMenu implements Runnable{
      * @param stage Stage for the current scene/display window
      * @throws IOException
      */
-    public void setStage(Stage stage) throws IOException {
+    public void setStage(Stage stage){
         this.stage = stage;
-        this.loader = new FXMLLoader(getClass().getResource("main.fxml"));
-        Parent root = this.loader.load();
+        this.loader = new FXMLLoader(getClass().getResource("FXML/main.fxml"));
+        Parent root = null;
+        try {
+            root = this.loader.load();
+        } catch (IOException e) {
+            e.getCause().getMessage();
+        }
         this.scene = new Scene(root);
         this.scene.getStylesheets().add("menu/styles.css");
         this.stage.setScene(this.scene);
         this.stage.setFullScreen(true);
+        this.stage.setFullScreenExitHint(null);
         this.stage.setAlwaysOnTop(true);
     }
 
-    /**
-     * to finalize menu and display the stage
-     *
-     * @Override this will override the library method of runnable
-     */
-    @Override
-    public void run() {
+    public void showStage(){
         this.stage.show();
     }
 }

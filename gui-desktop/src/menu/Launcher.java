@@ -21,11 +21,7 @@ public class Launcher extends Application{
      * @throws Exception excep. handling for loaders
      */
     public void start(Stage primaryStage) throws Exception {
-        Splash splash = new Splash(new Stage());
         MainMenu menu = new MainMenu(primaryStage);
-        Thread t1 = new Thread(splash);
-        Thread t2 = new Thread(menu);
-        t2.setDaemon(true);
-        t2.run();
+        menu.showStage();
     }
 }

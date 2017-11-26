@@ -9,6 +9,8 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
+import javafx.stage.Stage;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -25,7 +27,6 @@ public class MenuControls implements Initializable{
     @FXML private WebView webView;
     private Text wrong = new Text();
     private Text passwordPromt = new Text();
-
     private boolean bVal;
 
     /**
@@ -56,7 +57,7 @@ public class MenuControls implements Initializable{
      * @param event
      * @throws InterruptedException
      */
-    public void handleLogIn(MouseEvent event) throws InterruptedException {
+    public void handleLogIn(MouseEvent event){
         String password = getPassword();
         this.bannerID.clear();
         this.login.getChildren().remove(this.wrong);
@@ -65,7 +66,10 @@ public class MenuControls implements Initializable{
             this.login.getChildren().add(this.passwordPromt);
            return;
         } else {
+            //InsertPax insertPax = new InsertPax();
+           // insertPax.insert(Integer.parseInt(password), -1, -1 , -1, -1, -1);
             System.out.println(password);
+            new RouteSelection((Stage)this.bannerID.getScene().getWindow());
         }
     }
 
@@ -107,5 +111,4 @@ public class MenuControls implements Initializable{
         this.login.getChildren().add(this.passwordPromt);
         tweets();
     }
-
 }
