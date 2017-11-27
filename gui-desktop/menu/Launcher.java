@@ -1,7 +1,9 @@
 package menu;
 
+import menu.Model.MainMenu;
 import javafx.application.Application;
 import javafx.stage.Stage;
+import menu.Model.MainMenu;
 
 public class Launcher extends Application{
 
