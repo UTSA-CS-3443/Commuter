@@ -25,7 +25,7 @@ public class AppFinalProject
 		route.addBusStop("Brackenridge Lot 3", 9);
 		routes.add(route);
 		route.fillTimeSlots();
-		ClockGetterSetter currentTime = new ClockGetterSetter(now.get(Calendar.HOUR_OF_DAY), now.get(Calendar.MINUTE));
+		ClockGetterSetter currentTime = new ClockGetterSetter(//Calender);
 		Thread clock = new Thread(new Clock(route, currentTime));
 		clock.start();
 		threads.add(new Thread(new BeginRoute(route, currentTime)));

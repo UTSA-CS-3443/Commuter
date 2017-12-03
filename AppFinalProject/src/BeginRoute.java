@@ -20,7 +20,6 @@ public class BeginRoute implements Runnable
         Scanner sc = new Scanner(System.in);
         String time = "";
         String input;
-        System.out.println("hello");
         int[] array = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2};
 
 
