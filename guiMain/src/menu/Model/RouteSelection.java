@@ -8,16 +8,32 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * this class is for the second scene in the application
+ *
+ * @author Jonathan Perry
+ */
 public class RouteSelection{
 
     private FXMLLoader loader;
     private Stage stage;
 
+    /**
+     * the route slection contructor to generate a new scne
+     * for the primary stage window
+     *
+     * @param stage the primary stage passed from scene to scene
+     */
     public RouteSelection(Stage stage){
         this.stage = stage;
         setupRouteSelection();
     }
 
+    /**
+     * this method will handle the bulk of setting up
+     * the stage for route selections, it will load the fxml
+     * which will be hnadled through the controller
+     */
     private void setupRouteSelection(){
         this.loader = new FXMLLoader(getClass().getResource("../View/routes.fxml"));
         Parent root = null;
