@@ -1,3 +1,8 @@
+/**
+ *
+ *
+ * @author Chris Snyder
+ */
 public class ClockGetterSetter
 {
     private int iHour;

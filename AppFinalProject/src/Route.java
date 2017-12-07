@@ -1,6 +1,12 @@
 import java.util.ArrayList;
 
-public class Route 
+/**
+ * Route object, stores relevent info about the routes as well
+ * as allowing students to be added to it, and print
+ *
+ * @author Chris Snyder
+ */
+public class Route
 {
 	private ArrayList<TimeSlot> timeSlots;
 	private ArrayList<BusStop> busStops;
@@ -9,18 +15,30 @@ public class Route
 	private TimeSlot end;
 	private int studentLimit;
 
+	/**
+	 * Constructor
+	 *
+	 * @param szName name of the route
+	 * @param start start time
+	 * @param end end time
+	 */
 	public Route(String szName, TimeSlot start, TimeSlot end)
 	{
-		this.setTimeSlots(new ArrayList<>());
-		this.setBusStops( new ArrayList<>());
+		this.setTimeSlots(new ArrayList<TimeSlot>());
+		this.setBusStops( new ArrayList<BusStop>());
 		//this.setStudents( new ArrayList<>());
 		this.setName(szName);
 		this.setStart(start);
 		this.setEnd(end);
 		this.studentLimit = 70;
 	}
-	
 
+
+	/**
+	 * adds a new bus stop
+	 * @param name name of the stop
+	 * @param offset time offest for the next stop
+	 */
 	public void addBusStop(String name, int offset)
 	{
 		BusStop stop = new BusStop(name, offset);
@@ -28,6 +46,11 @@ public class Route
 	}
 
 
+	/**
+	 * Checks if the route currently has seats left at a specified time
+	 * @param iTime the specified time
+	 * @return true if there are seats left
+	 */
 	public Boolean hasSeats(int iTime)
 	{
 		if (this.getTimeSlots().get(iTime).getStudents().size() < this.studentLimit)
@@ -38,6 +61,10 @@ public class Route
 	}
 
 
+	/**
+	 * fills the roue with timeslots
+	 *
+	 */
 	public void fillTimeSlots()
 	{
 
@@ -85,13 +112,11 @@ public class Route
 		}
 
 	}
-	
-
-	
 
 
-
-
+	/**
+	 * prints all the routes timeslots as well as info about who is on it
+	 */
 	public void printTimes()
 	{
 		System.out.println("\n");
@@ -115,44 +140,82 @@ public class Route
 		}
 	}
 
+	/**
+	 * gets the timeslots
+	 * @return the timeslots
+	 */
 	public ArrayList<TimeSlot> getTimeSlots() {
 		return timeSlots;
 	}
 
+	/**
+	 * sets the timeslots
+	 * @param timeSlots sets the timeslot arraylist
+	 */
 	public void setTimeSlots(ArrayList<TimeSlot> timeSlots) {
 		this.timeSlots = timeSlots;
 	}
 
+	/**
+	 * get the Start timeslot
+	 * @return TimeSlot start
+	 */
 	public TimeSlot getStart() {
 		return start;
 	}
 
+	/**
+	 * sets the Start time
+	 * @param start tImeSLot start
+	 */
 	public void setStart(TimeSlot start) {
 		this.start = start;
 	}
 
+	/**
+	 * gets the End time
+	 * @return the end time
+	 */
 	public TimeSlot getEnd() {
 		return end;
 	}
 
+	/**
+	 * sets the End time
+	 * @param end the End time
+	 */
 	public void setEnd(TimeSlot end) {
 		this.end = end;
 	}
 
+	/**
+	 * gets the name
+	 * @return the name
+	 */
 	public String getName() {
 		return name;
 	}
 
+	/**
+	 * sets the name
+	 * @param name the name
+	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 
-
+	/**
+	 * gets the bus stop array ist
+	 * @return the bus stop array list
+	 */
 	public ArrayList<BusStop> getBusStops() {
 		return busStops;
 	}
 
-
+	/**
+	 * sets the bus stops
+	 * @param busStops the bus stops array list
+	 */
 	public void setBusStops(ArrayList<BusStop> busStops) {
 		this.busStops = busStops;
 	}

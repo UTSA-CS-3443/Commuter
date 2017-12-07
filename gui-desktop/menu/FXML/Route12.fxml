@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="342.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu.RouteStops12Controller">
+    <children>
+        <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="342.0" prefWidth="608.0">
+            <children>
+                <ImageView AnchorPane.bottomAnchor="-738.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1312.0" AnchorPane.topAnchor="0.0">
+                    <Image url="@../userinterface-2.png">
+                    </Image>
+                </ImageView>
+                <Button fx:id="btnHillCP" layoutX="893.0" layoutY="649.0" mnemonicParsing="false" text="(1) Hill Country Place" textOverrun="LEADING_ELLIPSIS" />
+                <TextField alignment="CENTER" layoutX="900.0" layoutY="580.0" prefHeight="18.0" prefWidth="120.0" text="Pick Your Stop:">
+                </TextField>
+                <ImageView fitHeight="256.0" fitWidth="583.0" layoutX="658.0" layoutY="342.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Images/Route12.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>
