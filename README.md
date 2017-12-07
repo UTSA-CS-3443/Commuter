@@ -1,5 +1,5 @@
 # Commuter
-#How To Run The Code
+# How to run it
 -Clone the repo
 -import project in AppFinalProject repo into Eclipse
 -import project in guiMain repo into Eclipse
