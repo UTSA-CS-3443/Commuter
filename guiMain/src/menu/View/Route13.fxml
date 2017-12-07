@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="342.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu.Controller.RouteStops13Controller">
+    <children>
+        <Pane prefHeight="342.0" prefWidth="608.0">
+            <children>
+                <ImageView AnchorPane.bottomAnchor="-738.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1312.0" AnchorPane.topAnchor="0.0">
+                    <Image url="@../Images/userinterface-2.png">
+
+                    </Image>
+                </ImageView>
+                <Button fx:id="btnECampL2" layoutX="995.0" layoutY="715.0" mnemonicParsing="false" text="(2) East Campus Lot 2" onMouseClicked="#handleBtnL2" />
+                <ImageView fitHeight="208.0" fitWidth="573.0" layoutX="674.0" layoutY="405.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Images/Route13.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="btnECampL1" layoutX="776.0" layoutY="715.0" mnemonicParsing="false" text="(1) East Camput Lot 1" onMouseClicked="#handleBtnL1"/>
+                <TextField alignment="CENTER" layoutX="890.0" layoutY="638.0" prefHeight="27.0" prefWidth="141.0" text="Pick Your Stop:" />
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>
