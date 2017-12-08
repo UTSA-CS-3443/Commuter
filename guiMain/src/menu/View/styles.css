@@ -1,0 +1,28 @@
+<<<<<<< HEAD
+#errorMsg {
+     -fx-font: 18px Arial;
+     -fx-fill: #00FF00;
+     -fx-stroke: black;
+     -fx-font-weight: bold;
+     -fx-stroke-width: .5;
+ }
+ #prompt {
+      -fx-font: 26px Arial;
+      -fx-fill: #00FFFF;
+      -fx-stroke: black;
+      -fx-stroke-width: .5;
+=======
+#errorMsg {
+     -fx-font: 18px Arial;
+     -fx-fill: #00FF00;
+     -fx-stroke: black;
+     -fx-font-weight: bold;
+     -fx-stroke-width: .5;
+ }
+ #prompt {
+      -fx-font: 26px Arial;
+      -fx-fill: #00FFFF;
+      -fx-stroke: black;
+      -fx-stroke-width: .5;
+>>>>>>> 3d23d977f5da8e3e2052b71db2f70d30276b5dfc
+  }
